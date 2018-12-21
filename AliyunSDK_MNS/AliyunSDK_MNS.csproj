@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{707CE871-BD7B-48E9-A8BE-BEB81AEAA79F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aliyun.MNS</RootNamespace>
+    <AssemblyName>Aliyun.MNS</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ITopic.cs" />
+    <Compile Include="Model\AccountAttributes.cs" />
+    <Compile Include="Model\BatchSmsAttributes.cs" />
+    <Compile Include="Model\CreateTopicRequest.cs" />
+    <Compile Include="Model\CreateTopicResponse.cs" />
+    <Compile Include="Model\DeleteTopicRequest.cs" />
+    <Compile Include="Model\DeleteTopicResponse.cs" />
+    <Compile Include="Model\EndpointInvalidException.cs" />
+    <Compile Include="Model\GetAccountAttributesRequest.cs" />
+    <Compile Include="Model\GetAccountAttributesResponse.cs" />
+    <Compile Include="Model\GetSubscriptionAttributeRequest.cs" />
+    <Compile Include="Model\GetSubscriptionAttributeResponse.cs" />
+    <Compile Include="Model\GetTopicAttributesRequest.cs" />
+    <Compile Include="Model\GetTopicAttributesResponse.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\CreateTopicRequestMarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\CreateTopicResponseUnmarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\DeleteTopicRequestMarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\DeleteTopicResponseUnmarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\GetAccountAttributesRequestMarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\GetAccountAttributesResponseUnmarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\GetSubscriptionAttributeRequestMarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\GetSubscriptionAttributeResponseUnmarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\GetTopicAttributesRequestMarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\GetTopicAttributesResponseUnmarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\ListSubscriptionRequestMarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\ListSubscriptionResponseUnmarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\ListTopicRequestMarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\ListTopicResponseUnmarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\PublishMessageRequestMarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\PublishMessageResponseUnmarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\SetAccountAttributesRequestMarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\SetAccountAttributesResponseUnmarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\SetSubscriptionAttributeRequestMarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\SetSubscriptionAttributeResponseUnmarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\SetTopicAttributesRequestMarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\SetTopicAttributesResponseUnmarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\SubscribeRequestMarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\SubscribeResponseUnmarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\UnsubscribeRequestMarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\UnsubscribeResponseUnmarshaller.cs" />
+    <Compile Include="Model\ListSubscriptionRequest.cs" />
+    <Compile Include="Model\ListSubscriptionResponse.cs" />
+    <Compile Include="Model\ListTopicRequest.cs" />
+    <Compile Include="Model\ListTopicResponse.cs" />
+    <Compile Include="Model\MailAttributes.cs" />
+    <Compile Include="Model\MD5ValidateException.cs" />
+    <Compile Include="Model\MessageAttributes.cs" />
+    <Compile Include="Model\PublishMessageRequest.cs" />
+    <Compile Include="Model\PublishMessageResponse.cs" />
+    <Compile Include="Model\SetAccountAttributesRequest.cs" />
+    <Compile Include="Model\SetAccountAttributesResponse.cs" />
+    <Compile Include="Model\SetSubscriptionAttributeRequest.cs" />
+    <Compile Include="Model\SetSubscriptionAttributeResponse.cs" />
+    <Compile Include="Model\SetTopicAttributesRequest.cs" />
+    <Compile Include="Model\SetTopicAttributesResponse.cs" />
+    <Compile Include="Model\SmsAttributes.cs" />
+    <Compile Include="Model\SubscriptionAttributes.cs" />
+    <Compile Include="Model\SubscribeRequest.cs" />
+    <Compile Include="Model\SubscribeResponse.cs" />
+    <Compile Include="Model\SubscriptionAlreadyExistException.cs" />
+    <Compile Include="Model\SubscriptionNameInvalidException.cs" />
+    <Compile Include="Model\SubscriptionNameLengthErrorException.cs" />
+    <Compile Include="Model\SubscriptionNotExistException.cs" />
+    <Compile Include="Model\TopicAlreadyExistException.cs" />
+    <Compile Include="Model\TopicAttributes.cs" />
+    <Compile Include="Model\TopicNameInvalidException.cs" />
+    <Compile Include="Model\TopicNameLengthErrorException.cs" />
+    <Compile Include="Model\TopicNotExistException.cs" />
+    <Compile Include="Model\UnsubscribeRequest.cs" />
+    <Compile Include="Model\UnsubscribeResponse.cs" />
+    <Compile Include="Topic.cs" />
+    <Compile Include="IQueue.cs" />
+    <Compile Include="Model\BatchDeleteFailException.cs" />
+    <Compile Include="Model\BatchDeleteMessageRequest.cs" />
+    <Compile Include="Model\BatchDeleteMessageResponse.cs" />
+    <Compile Include="Model\BatchPeekMessageRequest.cs" />
+    <Compile Include="Model\BatchPeekMessageResponse.cs" />
+    <Compile Include="Model\BatchReceiveMessageRequest.cs" />
+    <Compile Include="Model\BatchReceiveMessageResponse.cs" />
+    <Compile Include="Model\BatchSendFailException.cs" />
+    <Compile Include="Model\BatchSendMessageRequest.cs" />
+    <Compile Include="Model\BatchSendMessageResponse.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\BatchDeleteMessageRequestMarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\BatchDeleteMessageResponseUnmarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\BatchPeekMessageRequestMarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\BatchPeekMessageResponseUnmarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\BatchReceiveMessageRequestMarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\BatchReceiveMessageResponseUnmarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\BatchSendMessageRequestMarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\BatchSendMessageResponseUnmarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\PeekMessageRequestMarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\PeekMessageResponseUnmarshaller.cs" />
+    <Compile Include="Model\MalformedXMLException.cs" />
+    <Compile Include="Model\MessageNotExistException.cs" />
+    <Compile Include="Model\PeekMessageRequest.cs" />
+    <Compile Include="Model\PeekMessageResponse.cs" />
+    <Compile Include="Model\SimpleMNSRequest.cs" />
+    <Compile Include="Queue.cs" />
+    <Compile Include="Model\DeleteMessageRequest.cs" />
+    <Compile Include="MNSErrorCode.cs" />
+    <Compile Include="Runtime\Internal\Transform\RequestMarshallException.cs" />
+    <Compile Include="Runtime\Internal\Transform\ResponseUnmarshallException.cs" />
+    <Compile Include="Runtime\Internal\Transform\XmlUnmarshaller.cs" />
+    <Compile Include="Runtime\Internal\Transform\XmlMarshaller.cs" />
+    <Compile Include="Model\QueueAttributes.cs" />
+    <Compile Include="MNSClient.cs" />
+    <Compile Include="MNSConfig.cs" />
+    <Compile Include="MNSException.cs" />
+    <Compile Include="IMNS.cs" />
+    <Compile Include="Internal\ResponseValidationHandler.cs" />
+    <Compile Include="Model\MNSRequest.cs" />
+    <Compile Include="Model\ChangeMessageVisibilityRequest.cs" />
+    <Compile Include="Model\ChangeMessageVisibilityResponse.cs" />
+    <Compile Include="Model\CreateQueueRequest.cs" />
+    <Compile Include="Model\CreateQueueResponse.cs" />
+    <Compile Include="Model\DeleteMessageResponse.cs" />
+    <Compile Include="Model\DeleteQueueRequest.cs" />
+    <Compile Include="Model\DeleteQueueResponse.cs" />
+    <Compile Include="Model\GetQueueAttributesRequest.cs" />
+    <Compile Include="Model\GetQueueAttributesResponse.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\ChangeMessageVisibilityRequestMarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\ChangeMessageVisibilityResponseUnmarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\CreateQueueRequestMarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\CreateQueueResponseUnmarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\DeleteMessageRequestMarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\DeleteMessageResponseUnmarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\DeleteQueueRequestMarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\DeleteQueueResponseUnmarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\GetQueueAttributesRequestMarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\GetQueueAttributesResponseUnmarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\ListQueueRequestMarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\ListQueueResponseUnmarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\ReceiveMessageRequestMarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\ReceiveMessageResponseUnmarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\SendMessageRequestMarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\SendMessageResponseUnmarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\SetQueueAttributesRequestMarshaller.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\SetQueueAttributesResponseUnmarshaller.cs" />
+    <Compile Include="Model\ListQueueRequest.cs" />
+    <Compile Include="Model\ListQueueResponse.cs" />
+    <Compile Include="Model\Message.cs" />
+    <Compile Include="Model\QueueAlreadyExistException.cs" />
+    <Compile Include="Model\QueueNotExistException.cs" />
+    <Compile Include="Model\InvalidArgumentException.cs" />
+    <Compile Include="Model\ReceiptHandleErrorException.cs" />
+    <Compile Include="Model\ReceiveMessageRequest.cs" />
+    <Compile Include="Model\ReceiveMessageResponse.cs" />
+    <Compile Include="Model\SendMessageRequest.cs" />
+    <Compile Include="Model\SendMessageResponse.cs" />
+    <Compile Include="Model\SetQueueAttributesRequest.cs" />
+    <Compile Include="Model\SetQueueAttributesResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Runtime\AliyunServiceClient.cs" />
+    <Compile Include="Runtime\AliyunServiceException.cs" />
+    <Compile Include="Runtime\WebServiceResponse.cs" />
+    <Compile Include="Runtime\ServiceCredentials.cs" />
+    <Compile Include="Runtime\ClientConfig.cs" />
+    <Compile Include="Runtime\Enumerations.cs" />
+    <Compile Include="Runtime\Internal\WebServiceRequest.cs" />
+    <Compile Include="Runtime\Internal\Auth\IServiceSigner.cs" />
+    <Compile Include="Runtime\Internal\Auth\MNSSigner.cs" />
+    <Compile Include="Runtime\Internal\DefaultRequest.cs" />
+    <Compile Include="Runtime\Internal\ErrorResponse.cs" />
+    <Compile Include="Runtime\Internal\IRequest.cs" />
+    <Compile Include="Model\Internal\MarshallTransformations\ErrorResponseUnmarshaller.cs" />
+    <Compile Include="Runtime\Internal\Transform\HttpWebRequestResponseData.cs" />
+    <Compile Include="Runtime\Internal\Transform\IMarshaller.cs" />
+    <Compile Include="Runtime\Internal\Transform\IResponseUnmarshaller.cs" />
+    <Compile Include="Runtime\Internal\Transform\IUnmarshaller.cs" />
+    <Compile Include="Runtime\Internal\Transform\IWebResponseData.cs" />
+    <Compile Include="Runtime\Internal\Transform\ResponseUnmarshallers.cs" />
+    <Compile Include="Runtime\Internal\Transform\UnmarshallerContext.cs" />
+    <Compile Include="Runtime\Internal\Util\Extensions.cs" />
+    <Compile Include="Runtime\Internal\Util\Metrics.cs" />
+    <Compile Include="Runtime\Pipeline\Contexts.cs" />
+    <Compile Include="Runtime\Pipeline\ErrorHandler\ErrorHandler.cs" />
+    <Compile Include="Runtime\Pipeline\ErrorHandler\ExceptionHandler.cs" />
+    <Compile Include="Runtime\Pipeline\ErrorHandler\HttpErrorResponseExceptionHandler.cs" />
+    <Compile Include="Runtime\Pipeline\ErrorHandler\IExceptionHandler.cs" />
+    <Compile Include="Runtime\Pipeline\ErrorHandler\WebExceptionHandler.cs" />
+    <Compile Include="Runtime\Pipeline\Handlers\CredentialsRetriever.cs" />
+    <Compile Include="Runtime\Pipeline\Handlers\GenericHandler.cs" />
+    <Compile Include="Runtime\Pipeline\Handlers\Marshaller.cs" />
+    <Compile Include="Runtime\Pipeline\Handlers\MetricsHandler.cs" />
+    <Compile Include="Runtime\Pipeline\Handlers\Signer.cs" />
+    <Compile Include="Runtime\Pipeline\Handlers\Unmarshaller.cs" />
+    <Compile Include="Runtime\Pipeline\HttpErrorResponseException.cs" />
+    <Compile Include="Runtime\Pipeline\HttpHandler\HttpHandler.cs" />
+    <Compile Include="Runtime\Pipeline\HttpHandler\HttpWebRequestFactory.cs" />
+    <Compile Include="Runtime\Pipeline\HttpHandler\IHttpRequestFactory.cs" />
+    <Compile Include="Runtime\Pipeline\IPiplelineHandler.cs" />
+    <Compile Include="Runtime\Pipeline\PipelineHandler.cs" />
+    <Compile Include="Runtime\Pipeline\RetryHandler\DefaultRetryPolicy.cs" />
+    <Compile Include="Runtime\Pipeline\RetryHandler\RetryHandler.cs" />
+    <Compile Include="Runtime\Pipeline\RetryHandler\RetryPolicy.cs" />
+    <Compile Include="Runtime\Pipeline\RuntimeAsyncResult.cs" />
+    <Compile Include="Runtime\Pipeline\RuntimePipeline.cs" />
+    <Compile Include="Util\AliyunSDKUtils.cs" />
+    <Compile Include="Util\CryptoUtil.cs" />
+    <Compile Include="Util\HttpHeader.cs" />
+    <Compile Include="Util\MNSConstants.cs" />
+    <Compile Include="Util\TypeWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="log4net.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Libs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="README.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
